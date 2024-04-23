@@ -1,0 +1,94 @@
+<div id="calculator">
+    <input type="text" id="display" >
+    <br>
+    <br>
+    <button onclick="calculate('exp')">exp</button>
+    <button onclick="calculate('log')">log</button>
+    <button onclick="calculate('cos')">cos</button>
+    <br>
+    <button onclick="calculate('abs')">abs</button>
+    <button onclick="calculate('round')">round</button>
+    <button onclick="calculate('sin')">sin</button>
+    <br>
+    <button onclick="calculate('tan')">tan</button>
+    <button onclick="calculate('sqrt')">sqrt</button>
+    <button onclick="calculate('pow')">pow</button>
+</div>
+</center>
+<script>
+var display = document.getElementById('display');
+
+function calculate(func) {
+    var number = parseFloat(display.value);
+    var result;
+    switch (func) {
+        case 'exp':
+            result = Math.exp(number);
+            break;
+        case 'log':
+            result = Math.log(number);
+            break;
+        case 'abs':
+            result = Math.abs(number);
+
+        
+            break;
+            case 'sqrt':
+            result = Math.sqrt(number);
+
+            break;
+            case 'pow':
+            result = Math.pow(number);
+
+            break;
+            case 'sin':
+            result = Math.sin(number);
+
+
+            break;
+            case 'cos':
+            result = Math.cos(number);
+
+            break;
+            case 'round':
+            result = Math.round(number);
+
+            break;
+            case 'tan':
+            result = Math.tan(number);
+
+            
+
+            break;
+        default:
+
+            result = 'Invalid operation';
+    }
+    display.value = result;
+}
+</script>
+
+<style >
+button {
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    padding: 30px;
+    gap:50 px;
+    grid-template-columns: repeat(4,1fr);
+   }
+   
+   button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+   }
+   
+   </style>
+</body>
+</html>
